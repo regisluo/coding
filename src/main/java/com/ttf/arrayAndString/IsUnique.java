@@ -1,7 +1,8 @@
 package com.ttf.arrayAndString;
 
 /**
- * assume ASCII encoding string
+ * check if the string has unique character,
+ * assuming the string is encoded in ASCII
  */
 public class IsUnique {
     private static boolean isUnique(String s){
