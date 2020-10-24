@@ -22,7 +22,7 @@ public class QueueImplUsingArray {
             }
 
             size++; // a new element is added into the queue
-            arr[tail]=value;// push in the tail
+            arr[tail]=value;// add in the tail
             tail=getNextIndex(tail);
 
         }

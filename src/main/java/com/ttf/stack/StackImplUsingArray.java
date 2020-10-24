@@ -28,7 +28,7 @@ public class StackImplUsingArray {
             arr[top + 1] = value;
             size++;
 
-            // push min value int minArr
+            // add min value int minArr
             if (top == -1) {
                 minArr[top + 1] = value;
             } else if (value < minArr[top]) {

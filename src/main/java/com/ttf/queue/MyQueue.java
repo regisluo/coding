@@ -15,7 +15,7 @@ public class MyQueue<E> {
         this.size = 0;
     }
 
-    public E push(E e) {
+    public E add(E e) {
         if (size == length) {
             throw new RuntimeException("Queue is full");
         }
@@ -29,9 +29,10 @@ public class MyQueue<E> {
     }
 
     // return and remove head element
-    public E pop() {
+    public E poll() {
         if (size == 0) {
-            throw new RuntimeException("Queue is empty");
+            //throw new RuntimeException("Queue is empty");
+            return null;
         }
 
         Object e = arr[head];
@@ -45,7 +46,8 @@ public class MyQueue<E> {
     // return head element
     public E peek() {
         if (size == 0) {
-            throw new RuntimeException("Queue is empty");
+            //throw new RuntimeException("Queue is empty");
+            return null;
         }
 
         Object e = arr[head];
@@ -57,26 +59,28 @@ public class MyQueue<E> {
         return size == 0;
     }
 
+    public int size(){return size;}
+
     public static void main(String[] args){
         MyQueue<Integer> myQueue = new MyQueue<Integer>(5);
-        myQueue.push(1);
-        myQueue.push(2);
-        myQueue.push(3);
-        myQueue.push(4);
-//        myQueue.push(5);
+        myQueue.add(1);
+        myQueue.add(2);
+        myQueue.add(3);
+        myQueue.add(4);
+//        myQueue.add(5);
 
         System.out.println(myQueue.isEmpty());
 
         System.out.println(myQueue.peek());
 
-        System.out.println(myQueue.pop());
-        System.out.println(myQueue.pop());
-        System.out.println(myQueue.pop());
-        System.out.println(myQueue.pop());
-        System.out.println(myQueue.pop());
+        System.out.println(myQueue.poll());
+        System.out.println(myQueue.poll());
+        System.out.println(myQueue.poll());
+        System.out.println(myQueue.poll());
+        System.out.println(myQueue.poll());
 
         // exception
-        System.out.println(myQueue.pop());
+        System.out.println(myQueue.poll());
 
 
     }
