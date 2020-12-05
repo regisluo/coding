@@ -1,5 +1,7 @@
 package com.ttf.sort;
 
+import static com.ttf.sort.SortUtil.swap;
+
 import java.util.Arrays;
 
 public class SelectionSort {
@@ -14,7 +16,6 @@ public class SelectionSort {
         int[] answer = Arrays.copyOf(a,a.length);
 
         // visit the array from the element after current
-
         for(int current=0;current<answer.length-1;current++){
             int minIndex = current;
             for(int i=current+1;i<answer.length;i++){
@@ -28,11 +29,6 @@ public class SelectionSort {
         return answer;
     }
 
-    private static void swap(int[] a, int current, int minIndex) {
-        int temp = a[current];
-        a[current] = a[minIndex];
-        a[minIndex]=temp;
-    }
 
     public static void main(String[] args){
         int[] a = new int[5];
