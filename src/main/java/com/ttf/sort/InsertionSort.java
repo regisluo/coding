@@ -1,6 +1,5 @@
 package com.ttf.sort;
 
-import static com.sun.tools.javac.jvm.ByteCodes.swap;
 import static com.ttf.sort.SortUtil.swap;
 
 public class InsertionSort {

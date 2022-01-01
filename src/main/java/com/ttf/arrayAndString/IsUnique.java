@@ -1,8 +1,11 @@
 package com.ttf.arrayAndString;
 
 /**
- * check if the string has unique character,
- * assuming the string is encoded in ASCII
+ * updated: 18/12/2021
+ * check if the string only with unique characters, which means no duplicate chars.
+ * assuming the string is encoded in ASCII.
+ *
+ * Idea: String can convert to a char array
  */
 public class IsUnique {
     private static boolean isUnique(String s){
