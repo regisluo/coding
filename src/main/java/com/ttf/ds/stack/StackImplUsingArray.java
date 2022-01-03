@@ -1,4 +1,4 @@
-package com.ttf.stack;
+package com.ttf.ds.stack;
 
 /**
  * Stack impl using a fix length array
@@ -7,7 +7,7 @@ public class StackImplUsingArray {
     public static class MyStack {
         private int[] arr;
         private int size; // the current number of elements in the stack
-        private final int length; // max lenght of the stack
+        private final int length; // max length of the stack
         private int top; // current index pointing to the top element
 
         private int[] minArr; // array used to store the min values

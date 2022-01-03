@@ -1,6 +1,6 @@
-package com.ttf.queue;
+package com.ttf.ds.queue;
 
-import com.ttf.stack.MyStack;
+import com.ttf.ds.stack.MyStack;
 
 public class QueueImplUsingStack {
     // add new element into the queue

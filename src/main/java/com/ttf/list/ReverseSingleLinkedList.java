@@ -1,5 +1,7 @@
 package com.ttf.list;
 
+import com.ttf.ds.list.Node;
+
 public class ReverseSingleLinkedList {
 
     public static void main(String[] args) {

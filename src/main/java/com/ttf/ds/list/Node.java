@@ -1,8 +1,8 @@
-package com.ttf.list;
+package com.ttf.ds.list;
 
 /**
  * Single Node structure.
- * can be implemented with generic
+ * Can be refactored to be implemented with generic.
  */
 public class Node {
     private int value;

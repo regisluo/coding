@@ -1,6 +1,6 @@
-package com.ttf.stack;
+package com.ttf.ds.stack;
 
-import com.ttf.queue.MyQueue;
+import com.ttf.ds.queue.MyQueue;
 
 public class StackImplUsingQueue {
     private MyQueue<Integer> dataQueue;

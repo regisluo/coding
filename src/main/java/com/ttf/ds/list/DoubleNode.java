@@ -1,19 +1,19 @@
-package com.ttf.list;
+package com.ttf.ds.list;
 
-public class DoubleNode {
-    private int value;
+public class DoubleNode<T> {
+    private T value;
     private DoubleNode pre;
     private DoubleNode next;
 
-    public DoubleNode(int value) {
+    public DoubleNode(T value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
