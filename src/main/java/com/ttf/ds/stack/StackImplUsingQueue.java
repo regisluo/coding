@@ -1,3 +1,4 @@
+/*
 package com.ttf.ds.stack;
 
 import com.ttf.ds.queue.MyQueue;
@@ -52,3 +53,4 @@ public class StackImplUsingQueue {
         return ans;
     }
 }
+*/
