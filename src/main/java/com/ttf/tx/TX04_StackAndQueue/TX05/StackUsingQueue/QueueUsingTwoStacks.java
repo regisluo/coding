@@ -1,12 +1,12 @@
-package com.ttf.tx.TX04_StackAndQueue.StackUsingQueue;
+package com.ttf.tx.TX04_StackAndQueue.TX05.StackUsingQueue;
 
 import java.util.Stack;
 
-public class QueueUsingStack {
+public class QueueUsingTwoStacks {
     private Stack<Integer> s1;
     private Stack<Integer> s2;
 
-    public QueueUsingStack(){
+    public QueueUsingTwoStacks(){
         this.s1 = new Stack<>();
         this.s2 = new Stack<>();
     }

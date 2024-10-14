@@ -1,6 +1,4 @@
-package com.ttf.tx.TX04_StackAndQueue.StackUsingQueue;
-
-import com.ttf.tx.TX04_StackAndQueue.QueueUsingLinkedList;
+package com.ttf.tx.TX04_StackAndQueue.TX05.StackUsingQueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -17,11 +15,9 @@ public class StackUsingOneQueue {
 
     // time complexity is O(n)
     public void push(int data){
-        queue.offer(data);
-
         // rotate the queue so the last element is at the front
         int size = queue.size();
-
+        queue.offer(data);
         for (int i=0;i<size;i++){
             queue.offer(queue.poll());
         }
@@ -43,6 +39,22 @@ public class StackUsingOneQueue {
 
     private boolean isEmpty(){
         return queue.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        StackUsingOneQueue stack = new StackUsingOneQueue();
+
+        // Push elements onto the stack
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        // Peek the top element
+        System.out.println("Top element is: " + stack.peek());  // Output: 30
+
+        // Pop elements from the stack
+        System.out.println("Popped element: " + stack.pop());  // Output: 30
+        System.out.println("Top element after pop: " + stack.peek());  // Output: 20
     }
 
 }
