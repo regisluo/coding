@@ -11,8 +11,8 @@ public class TX06_Merge_Sort_Non_Rec {
         int n = arr.length;
         for (int step = 1; step < n; step *= 2) {
             for (int leftStart = 0; leftStart < n; leftStart += 2 * step) {
-                int mid = Math.min(n - 1, leftStart + step - 1);
-                int rightEnd = Math.min(n - 1, leftStart + 2 * step - 1);
+                int mid = Math.min(leftStart + step - 1, n-1);
+                int rightEnd = Math.min(leftStart + 2 * step - 1, n - 1);
                 TX06_Merge_Sort_Rec.merge(arr, leftStart, mid, rightEnd);
             }
         }
