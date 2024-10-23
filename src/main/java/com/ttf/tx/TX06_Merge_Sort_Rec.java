@@ -84,7 +84,7 @@ public class TX06_Merge_Sort_Rec {
     }
 
     public static void main(String[] args) {
-        int[] array = {38, 27, 43, 3, 9, 82, 10};
+        int[] array = {9, 4, 6, 2, 3};
         System.out.println("Original Array: " + Arrays.toString(array));
 
         mergeSort_rec2(array);
