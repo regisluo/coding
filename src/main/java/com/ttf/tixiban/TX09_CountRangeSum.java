@@ -49,11 +49,15 @@ public class TX09_CountRangeSum {
         for (int i = M + 1; i <= R; i++) {
             // find out a Window in LEFT that all sums in the Window lands in the Range [lower, upper], thus the
             // count is WindowR-WindowL
-            while (windowL <= M && arr[i] - arr[windowL] > upper) {
+
+            long min = arr[i] - upper;
+            long max = arr[i] - lower;
+
+            while (windowL <= M && arr[windowL] < min) {
                 windowL++;
             }
 
-            while (windowR <= M && arr[i] - arr[windowR] >= lower) {
+            while (windowR <= M && arr[windowR] <= max) {
                 windowR++;
             }
 
