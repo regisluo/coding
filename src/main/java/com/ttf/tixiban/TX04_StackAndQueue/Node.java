@@ -1,4 +1,4 @@
-package com.ttf.tx.TX04_StackAndQueue;
+package com.ttf.tixiban.TX04_StackAndQueue;
 // the data node of the queue
 public class Node <T>{
     T data;

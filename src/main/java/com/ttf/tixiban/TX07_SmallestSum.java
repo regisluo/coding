@@ -1,4 +1,4 @@
-package com.ttf.tx;
+package com.ttf.tixiban;
 public class TX07_SmallestSum {
 
     public static int smallestSum(int[] arr) {

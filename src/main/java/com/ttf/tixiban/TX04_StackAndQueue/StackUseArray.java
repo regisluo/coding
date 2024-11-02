@@ -1,4 +1,4 @@
-package com.ttf.tx.TX04_StackAndQueue;
+package com.ttf.tixiban.TX04_StackAndQueue;
 
 public class StackUseArray {
     int[] stack;

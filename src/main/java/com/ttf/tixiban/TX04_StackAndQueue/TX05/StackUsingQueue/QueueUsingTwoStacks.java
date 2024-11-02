@@ -1,4 +1,4 @@
-package com.ttf.tx.TX04_StackAndQueue.TX05.StackUsingQueue;
+package com.ttf.tixiban.TX04_StackAndQueue.TX05.StackUsingQueue;
 
 import java.util.Stack;
 

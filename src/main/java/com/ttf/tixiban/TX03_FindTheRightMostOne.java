@@ -1,6 +1,6 @@
-package com.ttf.tx;
+package com.ttf.tixiban;
 
-public class TX03 {
+public class TX03_FindTheRightMostOne {
     public static int findRightMostOne(int a) {
         return a & (-a);
     }

@@ -1,6 +1,6 @@
-package com.ttf.tx;
+package com.ttf.tixiban;
 
-public class TX01 {
+public class TX01_SwapTwoNumbersNoExtraVar {
     //Swap two numbers without using extra variable?
     public static void swapWithoutExtra(int a, int b) {
         a = a ^ b;
