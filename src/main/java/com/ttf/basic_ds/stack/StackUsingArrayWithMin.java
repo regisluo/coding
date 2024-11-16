@@ -3,7 +3,7 @@ package com.ttf.basic_ds.stack;
 /**
  * Stack impl using a fix length array
  */
-public class StackImplUsingArray {
+public class StackUsingArrayWithMin {
     public static class MyStack {
         private int[] arr;
         private int size; // the current number of elements in the stack

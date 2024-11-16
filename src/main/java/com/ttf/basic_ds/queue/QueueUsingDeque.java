@@ -3,10 +3,10 @@ package com.ttf.basic_ds.queue;
 /**
  * queue implementation based on DeQueue
  */
-public class QueueBasedOnDeque<T> {
+public class QueueUsingDeque<T> {
     DeQueue<T> deQueue;
 
-    public QueueBasedOnDeque() {
+    public QueueUsingDeque() {
         this.deQueue = new DeQueue<T>();
     }
 

@@ -3,7 +3,7 @@ package com.ttf.basic_ds.queue;
 /**
  * Queue implementation based on fix-length array
  */
-public class QueueBasedOnArray {
+public class QueueUsingArray {
     /**
      * the array to store the element
      */
@@ -20,7 +20,7 @@ public class QueueBasedOnArray {
     private int head;
     private int tail;
 
-    public QueueBasedOnArray(int length) {
+    public QueueUsingArray(int length) {
         arr = new int[length];
         this.size = 0;
         this.length = length;
@@ -28,7 +28,15 @@ public class QueueBasedOnArray {
         this.tail = 0;
     }
 
-    public void push(int value) throws Exception {
+    public int size(){
+        return size;
+    }
+
+    public boolean isEmpty(){
+        return this.size == 0;
+    }
+
+    public void enque(int value) throws Exception {
         if (size == arr.length) {
             throw new Exception("Queue is full");
         }
@@ -39,7 +47,7 @@ public class QueueBasedOnArray {
 
     }
 
-    public int poll() throws Exception {
+    public int deque() throws Exception {
         if (size == 0) {
             throw new Exception("there is no element in the queue");
         }
@@ -50,7 +58,15 @@ public class QueueBasedOnArray {
 
     }
 
+    private int peek() throws Exception {
+        if (size == 0) {
+            throw new Exception("there is no element in the queue");
+        }
+        return arr[head];
+    }
+
     private int getNextIndex(int index) {
+        // if index before the last index which is 'length-1'
         return index < length - 1 ? index + 1 : 0;
     }
 }

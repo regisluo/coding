@@ -1,12 +1,12 @@
 package com.ttf.basic_ds.stack;
 
-public class StackBasedOnArray {
+public class StackUsingArray {
     private int[] arr;
     private int size; // the current number of elements in the stack
     private final int length; // max length of the stack
     private int top; // current index pointing to the top element
 
-    public StackBasedOnArray(int length) {
+    public StackUsingArray(int length) {
         this.length = length;
         arr = new int[length];
         this.size = 0;
