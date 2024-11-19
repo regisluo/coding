@@ -30,6 +30,24 @@ public class SelectionSort {
     }
 
 
+    private static void selectionSort2(int[] a){
+        if (a==null) {
+            return;
+        }
+        for (int i=0;i<a.length;i++) {
+            int minIndex = i;
+            for (int j=i+1;j<a.length;j++) {
+                if (a[j] < a[minIndex]){
+                    minIndex = j;
+                }
+            }
+            int temp = a[i];
+            a[i] = a[minIndex];
+            a[minIndex] = temp;
+        }
+
+    }
+
     public static void main(String[] args){
         int[] a = new int[5];
         a[0]=3;

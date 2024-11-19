@@ -14,7 +14,7 @@ public class StackUsingArray {
     }
 
     // add an element into the stack
-    private void push(int value) {
+    public void push(int value) {
         if (size == length) {
             throw new RuntimeException("stack full");
         }
@@ -24,7 +24,7 @@ public class StackUsingArray {
     }
 
     // remove an element from the stack
-    private int pop() {
+    public int pop() {
         if (size == 0) {
             throw new RuntimeException("stack empty");
         }
@@ -34,14 +34,14 @@ public class StackUsingArray {
         return value;
     }
 
-    private int peek() {
+    public int peek() {
         if (size == 0) {
             throw new RuntimeException("stack empty");
         }
         return this.arr[top];
     }
 
-    private boolean empty() {
+    public boolean empty() {
         return size == 0;
     }
 

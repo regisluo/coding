@@ -5,7 +5,7 @@ import com.ttf.Util;
 import java.util.Arrays;
 
 public class TX11_Heap {
-    int length = 10;
+    int length;
     int[] arr;
     int size;
     double ratio = 0.75;
@@ -38,11 +38,12 @@ public class TX11_Heap {
             // extend the array
             this.arr  = Arrays.copyOf(this.arr, this.length*2);
         }
-        this.arr[this.size] = number;
-        heapInsert(arr, size++);
+        heapInsert(arr, number);
     }
 
-    private void heapInsert(int[] arr, int size){
+    private void heapInsert(int[] arr, int number){
+        this.arr[this.size] = number;
+        size++;
         int currentIndex = size-1;
         // refactor to heap: 0~size-1
         while (arr[currentIndex]>arr[(currentIndex-1)/2]) {

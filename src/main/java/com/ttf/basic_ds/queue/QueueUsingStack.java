@@ -1,53 +1,54 @@
-/*
-package com.ttf.ds.queue;
+package com.ttf.basic_ds.queue;
 
-import com.ttf.ds.stack.MyStack;
 
-public class QueueImplUsingStack {
-    // add new element into the queue
-    private MyStack<Integer> stackPush;
+import com.ttf.basic_ds.stack.StackUsingArray;
 
-    // return head of the queue
-    private MyStack<Integer> stackPop;
+public class QueueUsingStack {
+    int length;
+    // add new element into the stack
+    private StackUsingArray pushStack;
 
-    public QueueImplUsingStack(){
-        stackPush = new MyStack<Integer>(5);
-        stackPop = new MyStack<Integer>(5);
+    // return head of the stack
+    private StackUsingArray popStack;
+
+    public QueueUsingStack(int length){
+        this.length = length;
+        pushStack = new StackUsingArray(this.length);
+        popStack = new StackUsingArray(this.length);
     }
 
-    public void pushToPop(){
-        if(stackPop.isEmpty()){// only when stopPop is empty
-            // move all elements from add to poll stack
-            while (!stackPush.isEmpty())
-                stackPop.push(stackPush.pop());
+    public void move(){
+        if(popStack.empty()){
+            // only when popStack is empty, move all elements from pushStack to popStack
+            while (!pushStack.empty())
+                popStack.push(pushStack.pop());
         }
     }
 
-    public void push(Integer e){
-        stackPush.push(e);
-        pushToPop();
+    public void push(int e){
+        pushStack.push(e);
+        move();
     }
 
     public Integer pop(){
         if (isEmpty()){
             throw new RuntimeException("Queue is empty");
         }
-        pushToPop();
-        return stackPop.pop();
+        move();
+        return popStack.pop();
     }
 
     public boolean isEmpty(){
-        return stackPop.isEmpty() && stackPush.isEmpty();
+        return popStack.empty() && pushStack.empty();
     }
 
     public Integer peek(){
         if (isEmpty()){
             throw new RuntimeException("Queue is empty");
         }
-        pushToPop();
-        return stackPop.peek();
+        move();
+        return popStack.peek();
     }
 
 
 }
-*/

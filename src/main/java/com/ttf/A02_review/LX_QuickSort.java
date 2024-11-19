@@ -18,7 +18,7 @@ public class LX_QuickSort {
         if (L >= R) {
             return;
         }
-        swap(arr, L + (int) (Math.random() * (R - L + 1)), R);
+        //swap(arr, L + (int) (Math.random() * (R - L + 1)), R);
         int[] equalIndices = partitioning(arr, L, R);
         process(arr, L, equalIndices[0] - 1);
         process(arr, equalIndices[1] + 1, R);
@@ -26,7 +26,7 @@ public class LX_QuickSort {
 
 
     // partitioning the given arr make the pivot number in the right position;
-    // and the less numbers before pivot, and numbers more than the pivot on the right
+    // and the smaller numbers before pivot, and numbers more than the pivot on the right
     private static int[] partitioning(int[] arr, int left, int right) {
         if (left > right) {
             return new int[]{-1, -1};
@@ -40,12 +40,13 @@ public class LX_QuickSort {
         int more = right;
         // i is used to loop the arr, starting from index l
         int i = left;
-        while (i < more) {
+        int pivot = arr[right];
+        while (i < more) { // choose arr[right] as pivot
             // current less than pivot, increase the less index, and move
             // current to next index
-            if (arr[i] < arr[right]) {
+            if (arr[i] < pivot) {
                 swap(arr, i++, ++less);
-            } else if (arr[i] == arr[right]) {// equals then move current index only
+            } else if (arr[i] == pivot) {// equals then move current index only
                 i++;
             } else {// current more than pivot, increase more array;
                 // as current is more than pivot, then swap it to more array

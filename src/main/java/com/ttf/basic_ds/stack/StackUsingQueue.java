@@ -16,18 +16,22 @@ public class StackUsingQueue {
         dataQueue.enque(e);
     }
 
-    public Integer pop() throws Exception {
+    private void move() throws Exception {
         // move elements(except the tail) from dataQueue to helpQueue
         while (dataQueue.size() > 1) {
             helpQueue.enque(dataQueue.deque());
         }
-
-        Integer ans = dataQueue.deque();
-        //swap reference of dataQueue and helpQueue
+    }
+    private void swap() {
         QueueUsingArray tmp = dataQueue;
         dataQueue = helpQueue;
         helpQueue = tmp;
-
+    }
+    public Integer pop() throws Exception {
+        move();
+        Integer ans = dataQueue.deque();
+        //swap reference of dataQueue and helpQueue
+        swap();
         return ans;
     }
 
@@ -36,20 +40,12 @@ public class StackUsingQueue {
     }
 
     public Integer peek() throws Exception {
-        // move elements(except the tail) from dataQueue to helpQueue
-        while (dataQueue.size() > 1) {
-            helpQueue.enque(dataQueue.deque());
-        }
-
-        Integer ans = dataQueue.deque();
-        // add the tail to help
+        move();
+        int ans = dataQueue.deque();
+        // add the tail to helpQueue
         helpQueue.enque(ans);
-
         //swap reference of dataQueue and helpQueue
-        QueueUsingArray tmp = dataQueue;
-        dataQueue = helpQueue;
-        helpQueue = tmp;
-
+        swap();
         return ans;
     }
 }
