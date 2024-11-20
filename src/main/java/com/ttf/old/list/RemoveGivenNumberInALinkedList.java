@@ -1,6 +1,6 @@
 package com.ttf.old.list;
 
-import com.ttf.basic_ds.list.Node;
+import com.ttf.A01_basic_ds.list.Node;
 
 public class RemoveGivenNumberInALinkedList {
 
