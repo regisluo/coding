@@ -1,8 +1,16 @@
 package com.ttf.A01_basic_ds.list;
 
 public class SinglyLinkedList {
-    private Node head; // Head of the list
+    private SingleNode head; // Head of the list
     private int size;  // Number of elements in the list
+
+    public SingleNode head(){
+        return this.head;
+    }
+
+    public int size() {
+        return this.size;
+    }
 
     // Constructor
     public SinglyLinkedList() {
@@ -12,11 +20,11 @@ public class SinglyLinkedList {
 
     // Add a node at the end of the list
     public void add(int value) {
-        Node newNode = new Node(value);
+        SingleNode newNode = new SingleNode(value);
         if (head == null) {
             head = newNode; // If the list is empty, set head to the new node
         } else {
-            Node current = head;
+            SingleNode current = head;
             while (current.next() != null) { // Traverse to the end of the list
                 current = current.next();
             }
@@ -33,7 +41,7 @@ public class SinglyLinkedList {
             size--;
             return true;
         }
-        Node current = head;
+        SingleNode current = head;
         while (current.next() != null && current.next().getValue() != value) {
             current = current.next(); // Traverse to find the node to remove
         }
@@ -45,7 +53,7 @@ public class SinglyLinkedList {
 
     // Display the list
     public void display() {
-        Node current = head;
+        SingleNode current = head;
         while (current != null) {
             System.out.print(current.getValue() + " -> ");
             current = current.next();

@@ -1,9 +1,9 @@
 package com.ttf.A01_basic_ds.stack;
 
-import com.ttf.A01_basic_ds.list.Node;
+import com.ttf.A01_basic_ds.list.SingleNode;
 
 public class StackUsingNode {
-    private Node top;
+    private SingleNode top;
 
     public int pop() throws Exception {
         if (top == null) {
@@ -27,7 +27,7 @@ public class StackUsingNode {
     }
 
     public void push(int i) {
-        Node n = new Node(i);
+        SingleNode n = new SingleNode(i);
         n.setNext(top);
         top = n;
 

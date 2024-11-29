@@ -1,10 +1,10 @@
 package com.ttf.A01_basic_ds.queue;
 
-import com.ttf.A01_basic_ds.list.Node;
+import com.ttf.A01_basic_ds.list.SingleNode;
 
 public class QueueUsingNode {
-    private Node head;
-    private Node tail;
+    private SingleNode head;
+    private SingleNode tail;
     private int size;
 
     public int size() {
@@ -16,7 +16,7 @@ public class QueueUsingNode {
     }
 
     public void enque(int i) {
-        Node n = new Node(i);
+        SingleNode n = new SingleNode(i);
         size ++;
         if (tail!=null)
             tail.setNext(n);

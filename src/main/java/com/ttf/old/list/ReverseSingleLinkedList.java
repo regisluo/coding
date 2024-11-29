@@ -1,20 +1,20 @@
 package com.ttf.old.list;
 
-import com.ttf.A01_basic_ds.list.Node;
+import com.ttf.A01_basic_ds.list.SingleNode;
 
 public class ReverseSingleLinkedList {
 
     public static void main(String[] args) {
-        Node node1 = new Node(1);
-        Node node2 = new Node(2);
-        Node node3 = new Node(3);
-        Node node4 = new Node(4);
+        SingleNode node1 = new SingleNode(1);
+        SingleNode node2 = new SingleNode(2);
+        SingleNode node3 = new SingleNode(3);
+        SingleNode node4 = new SingleNode(4);
         node1.setNext(node2);
         node2.setNext(node3);
         node3.setNext(node4);
         node4.setNext(null);
 
-        Node node = reverseList(node1);
+        SingleNode node = reverseList(node1);
         while (node != null) {
             System.out.println(node.getValue());
             node = node.next();
@@ -28,9 +28,9 @@ public class ReverseSingleLinkedList {
      * @param head
      * @return
      */
-    public static Node reverseList(Node head) {
-        Node pre = null;
-        Node next = null;
+    public static SingleNode reverseList(SingleNode head) {
+        SingleNode pre = null;
+        SingleNode next = null;
         while (head != null) {
             // capture the next node
             next = head.next();
