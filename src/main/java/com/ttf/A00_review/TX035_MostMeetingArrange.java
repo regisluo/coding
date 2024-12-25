@@ -3,7 +3,12 @@ package com.ttf.A00_review;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class MostMeetingArrange {
+/**
+ * 贪心算法：
+ * 一般而言，这种题目都是贴近生活的应用题的感觉，考虑贪心算法。贪心的核心排序或堆有关。
+ * 贪心算法的代码本身一般比较简单，核心就是找到正确的比较和排序函数。
+ */
+public class TX035_MostMeetingArrange {
     public static class Meeting{
         int start;
         int end;
