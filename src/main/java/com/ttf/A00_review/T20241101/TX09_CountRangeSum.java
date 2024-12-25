@@ -1,4 +1,4 @@
-package com.ttf.A00_class;
+package com.ttf.A00_review.T20241101;
 
 /**
  * Given an integer array nums and two integers lower and upper, return the number of range sums that lie in [lower, upper] inclusive.

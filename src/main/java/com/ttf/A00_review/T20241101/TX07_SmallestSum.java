@@ -1,4 +1,4 @@
-package com.ttf.A00_class;
+package com.ttf.A00_review.T20241101;
 public class TX07_SmallestSum {
 
     public static int smallestSum(int[] arr) {

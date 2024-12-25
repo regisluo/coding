@@ -1,4 +1,4 @@
-package com.ttf.A00_class;
+package com.ttf.A00_review.T20241101;
 
 public class TX02_FindTheOnlyNumberOddTimes {
     public static int findOddNumber(int[] arr) {

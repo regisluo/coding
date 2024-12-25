@@ -17,6 +17,11 @@ public class BinaryTreeNode {
         System.out.println(this.value);
     }
 
+    public boolean isLeaf(){
+        return this !=null && (this.left==null && this.right==null);
+    }
+
+
     public static BinaryTreeNode getBT(boolean isFull){
         BinaryTreeNode head = new BinaryTreeNode(1);
         BinaryTreeNode left1= new BinaryTreeNode(2);
@@ -59,5 +64,9 @@ public class BinaryTreeNode {
         return head;
     }
 
+    @Override
+    public String toString(){
+        return this!=null? String.valueOf(this.value):"";
+    }
 
 }
