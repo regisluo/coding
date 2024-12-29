@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class Graph {
-    Map<Integer, Node> nodes;
-    Set<Edge> edges;
+    public Map<Integer, Node> nodes;
+    public Set<Edge> edges;
 
     public Graph() {
         this.nodes = new HashMap<>();
@@ -33,11 +33,18 @@ public class Graph {
                 fromNode = new Node(from);
                 fromNode.out++;
                 graph.nodes.put(from, fromNode);
+            } else {
+                fromNode = graph.nodes.get(from);
+                fromNode.out++;
             }
+
             if (!graph.nodes.containsKey(to)) {
                 toNode = new Node(to);
                 toNode.in++;
                 graph.nodes.put(to, toNode);
+            } else {
+                toNode = graph.nodes.get(to);
+                toNode.in++;
             }
             Edge e = new Edge(weight, fromNode, toNode);
             graph.edges.add(e);

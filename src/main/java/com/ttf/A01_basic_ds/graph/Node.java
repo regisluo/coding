@@ -9,6 +9,7 @@ public class Node {
     public int in;
     public int out;
     public List<Edge> edges;
+    public boolean visited;
 
     public Node(int val) {
         this.val = val;
@@ -17,5 +18,7 @@ public class Node {
         this.neighbors = new ArrayList<>();
         this.edges = new ArrayList<>();
     }
+
+
 
 }
