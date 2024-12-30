@@ -17,7 +17,7 @@ public class TX044_GraphBFS {
                 continue;
             }
             cur.visited = true;
-            System.out.println(cur.val);
+            System.out.println(cur.value);
             for (Node neighbor: cur.neighbors) {
                 if (!neighbor.visited) {
                     queue.add(neighbor);

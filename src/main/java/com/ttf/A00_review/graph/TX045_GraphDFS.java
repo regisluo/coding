@@ -26,7 +26,7 @@ public class TX045_GraphDFS {
 
     private void print(Node node) {
         node.visited = true;
-        System.out.println(node.val);
+        System.out.println(node.value);
     }
 
     public static void main(String[] args) {
