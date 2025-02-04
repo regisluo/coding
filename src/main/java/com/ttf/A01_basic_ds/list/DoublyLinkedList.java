@@ -52,12 +52,10 @@ public class DoublyLinkedList {
         }
         if (current.getNext() != null) {
             current.getNext().setPre(current.getPre());
-        }
-
-        if (current == tail) {
+        } else { // cur is tail node
             tail = current.getPre(); // Update the tail if the node to remove is the last one
-        }
 
+        }
         size--;
         return true;
     }

@@ -21,7 +21,7 @@ public class QueueUsingNode {
         if (tail!=null)
             tail.setNext(n);
         tail = n;
-        if (head == null)
+        if (head == null) // enque the first element
             head = tail;
     }
 
@@ -32,7 +32,7 @@ public class QueueUsingNode {
         int i = head.getValue();
         head = head.next();
         size --;
-        if (head==null)
+        if (head==null) // deque the last element
             tail=null;
         return i;
     }

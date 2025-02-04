@@ -48,10 +48,6 @@ public class TrieUsingArray {
             node.pass-= count;
             for (char c:chars) {
                 int index = c-'a';
-                if (node.nexts[index]==null) {
-                    // there is no given word in the trie
-                    return;
-                }
                 node.nexts[index].pass-=count;
                 node = node.nexts[index];
             }

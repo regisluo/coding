@@ -18,6 +18,7 @@ public class StackBasedOnDeque<T> {
     }
 
     public T pop() {
+        //出也是从队头出
         return this.deQueue.popHead();
     }
 
@@ -26,6 +27,7 @@ public class StackBasedOnDeque<T> {
      * @param t
      */
     public void push(T t){
+        //可以理解为插队：每次进都排在队头
         this.deQueue.addFromHead(t);
     }
 

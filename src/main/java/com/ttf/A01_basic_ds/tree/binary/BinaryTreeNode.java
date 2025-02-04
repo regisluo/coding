@@ -18,7 +18,7 @@ public class BinaryTreeNode {
     }
 
     public boolean isLeaf(){
-        return this !=null && (this.left==null && this.right==null);
+        return this !=null && this.left==null && this.right==null;
     }
 
 

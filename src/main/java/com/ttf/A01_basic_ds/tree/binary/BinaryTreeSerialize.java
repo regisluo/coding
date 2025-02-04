@@ -14,30 +14,29 @@ import java.util.Queue;
 public class BinaryTreeSerialize {
     public Queue<String> preSerialize(BinaryTreeNode root) {
         Queue<String> queue = new LinkedList<>();
-        preSerializeRecur(root, queue);
+        preserializeRecur(root, queue);
         return queue;
     }
 
-    private void preSerializeRecur(BinaryTreeNode cur, Queue<String> queue) {
+    private void preserializeRecur(BinaryTreeNode cur, Queue<String> queue) {
         if (cur==null){
-            queue.add(null);
+            queue.add(null);// null must be added as well
         } else {
             queue.add(String.valueOf(cur.value));
-            preSerializeRecur(cur.left, queue);
-            preSerializeRecur(cur.right, queue);
+            preserializeRecur(cur.left, queue);
+            preserializeRecur(cur.right, queue);
         }
     }
 
     // re-build a tree from the preSerialize list
-    public BinaryTreeNode buildFromPreSerialize(Queue<String> prelist) {
-        BinaryTreeNode root = null;
-        if (!prelist.isEmpty() && prelist.peek() != null) {
-            root = new BinaryTreeNode(Integer.valueOf(prelist.poll()));
+    public BinaryTreeNode PreDeSerialize(Queue<String> queue) {
+        String value = queue.poll();
+        if (value==null) {
+            return null;
         }
-        while (!prelist.isEmpty()) {
-            String value = prelist.poll();
-
-        }
-        return root;
+        BinaryTreeNode node = new BinaryTreeNode(Integer.valueOf(value));
+        node.left = PreDeSerialize(queue);
+        node.right = PreDeSerialize(queue);
+        return node;
     }
 }
