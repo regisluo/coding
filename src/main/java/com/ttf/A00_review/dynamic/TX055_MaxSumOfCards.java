@@ -1,8 +1,6 @@
 package com.ttf.A00_review.dynamic;
 
-import java.util.Arrays;
-
-public class MaxSumOfCards {
+public class TX055_MaxSumOfCards {
 
     public static int maxSumOfCards1(int[] cards) {
         return Math.max(first(cards, 0, cards.length-1), second(cards, 0, cards.length-1));

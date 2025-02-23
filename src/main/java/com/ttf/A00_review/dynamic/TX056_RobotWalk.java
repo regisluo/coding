@@ -1,6 +1,6 @@
 package com.ttf.A00_review.dynamic;
 
-public class RobotWalk {
+public class TX056_RobotWalk {
 
     /**
      * 机器人从start位置走steps步到达target位置的方法数
